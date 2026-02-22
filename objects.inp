@@ -149,6 +149,12 @@ part(0,"Part")
     {
         value("", 0)
     }
+
+   attribute("SEQUENCE", "Sequence", integer, "%d", no, none, "0.0", "0.0")
+   {
+        value("", 0)
+    }
+
     unique_attribute("USER_PHASE", "j_UserPhase_effects_numbering", string, "%s", yes, none, "0.0", "0.0")
     {
         value("", 0)
@@ -221,6 +227,14 @@ part(0,"Part")
     {
       value("", 0)
     }
+
+    /* 3. Sequence 어트리뷰트 */
+    attribute("SEQUENCE", "Sequence", integer, "%d", no, none, "0.0", "0.0")
+   {
+        value("", 0)
+    }
+
+
   }
 
 
@@ -255,7 +269,7 @@ part(0,"Part")
  tab_page("Parameters","jd_Parameters",4) 
  tab_page("ContourPlateOrientation","j_orientation",12)
  tab_page("HiddenAttributes","HiddenAttributes",92)
- tab_page("Custom_Data", "Fab & Paint Info", 1)
+ tab_page("Custom_Data", "Fab& Paint Info", 1)
 
  modify(1)
 }
@@ -267,7 +281,8 @@ part(0,"Part")
 beam(0,"j_beam")
 {
  tab_page("Parameters","jd_Parameters",4)
- tab_page("Custom_Data", "Fab & Paint Info", 1)
+ tab_page("Custom_Data", "Fab& Paint Info", 1)
+
 
  modify(1)
 }
@@ -352,6 +367,8 @@ foldedplate(0,"j_folded_plate")
 /***************************************************************************/
 concrete_beam(0,"Concrete beam")
 {
+
+  tab_page("Custom_Data", "Fab& Paint Info", 1)
 
  modify(1)
 }
